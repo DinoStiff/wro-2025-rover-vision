@@ -34,7 +34,7 @@ def send_data(send_buffer):
     for n in send_buffer:
         if n < 0 or n > 65535:
             raise Exception("Value range error, value should be between 0 and 65535.")
-        n = roundn(n)
+        n = round(n)
         uart.writechar(n & 0xff)
         uart.writechar((n >> 8) & 0xff)
         check = check ^ (n & 0xff)
