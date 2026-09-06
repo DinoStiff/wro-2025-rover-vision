@@ -47,7 +47,7 @@ while True:
                     found.append((class_id, b))
 
     if found:
-        found.sort(key=lambda t]: t[1].area(), reverse=True)
+        found.sort(key=lambda t: t[1].area(), reverse=True)
         found = found[:MAX_BLOBS]
 
         payload = [len(found)]
